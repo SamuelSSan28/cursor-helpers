@@ -30,7 +30,8 @@ The setup is intentionally simple: clear rules, reusable task commands, and ligh
    │  └─ agent-refactor.md
    └─ skills/
       ├─ skill-clean-code.md
-      └─ skill-react-next-patterns.md
+      ├─ skill-react-next-patterns.md
+      └─ skill-semantic-commits.md
 ```
 
 ## Rule filename order (numeric pattern)
