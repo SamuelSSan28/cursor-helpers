@@ -1,0 +1,16 @@
+---
+description: "Next.js + React rules (clean components, render hygiene, handlers conventions)"
+globs:
+  - "apps/web/**/*.{ts,tsx}"
+  - "src/frontend/**/*.{ts,tsx}"
+  - "**/*.tsx"
+alwaysApply: false
+---
+
+# Next.js / React Rules
+- Keep render clean: compute conditions BEFORE return.
+- Avoid complex expressions inside JSX.
+- Internal event handlers must be named handleX (handleClick, handleSubmit).
+- Props for events must be named onX (onClick, onSubmit).
+- Prefer composition over excessive prop customization.
+- Extract components only when repetition or isolation truly improves reuse.

@@ -1,0 +1,16 @@
+---
+description: "Pydantic schema rules (validation, typing, boundaries)"
+globs:
+  - "**/*schema*.py"
+  - "**/*model*.py"
+  - "**/schemas/**/*.py"
+  - "**/models/**/*.py"
+alwaysApply: false
+---
+
+# Pydantic Rules
+- Use explicit typed fields with meaningful names.
+- Validate data at boundaries with Pydantic models.
+- Avoid passing raw dict payloads across layers when a model exists.
+- Keep model validators focused and deterministic.
+- Prefer clear domain models over generic payload containers.

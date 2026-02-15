@@ -1,0 +1,19 @@
+# Project Stack
+- Backend: NestJS + TypeScript, FastAPI + Pydantic
+- Frontend: Next.js + TypeScript
+- Scripting allowed: Python
+
+# Non-Negotiables (Clean Code)
+- Code and identifiers must be in English.
+- Avoid abbreviations and generic names (data, info, value, item).
+- Booleans must start with: is / has / can / should / does.
+- No magic numbers. Use named constants.
+- Prefer early returns. Avoid else blocks when possible.
+- Avoid nested conditionals. Keep logic linear.
+- Comments explain WHY (limitations/workarounds/decisions), not WHAT.
+- Small iterations: implement -> test -> refactor -> review.
+
+# Quality Gate
+- Every new behavior requires tests (happy path + at least 2 edge cases), using pytest for Python services.
+- Controllers must stay thin (no business logic).
+- UI render must stay clean (no heavy JS inside JSX).

@@ -1,0 +1,15 @@
+---
+description: "Pytest rules (coverage, fixtures, edge cases)"
+globs:
+  - "**/tests/**/*.py"
+  - "**/test_*.py"
+  - "**/*_test.py"
+alwaysApply: false
+---
+
+# Pytest Rules
+- Add tests for each new behavior.
+- Cover happy path and at least two edge cases.
+- Use fixtures for setup reuse and readability.
+- Mock external dependencies, not internal business logic.
+- Keep test names behavior-oriented and explicit.

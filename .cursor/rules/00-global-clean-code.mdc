@@ -1,0 +1,13 @@
+---
+description: "Global Clean Code: naming, conditionals, constants, comments"
+alwaysApply: true
+---
+
+# Global Clean Code Rules
+- Use semantic English names. No abbreviations.
+- Name by cause, not effect.
+- Booleans: is/has/can/should/does prefix.
+- Replace magic numbers with named constants.
+- Prefer guard clauses (early return) over else.
+- Avoid nested conditionals; keep logic flat.
+- Comments must explain WHY, not WHAT.
