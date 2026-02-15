@@ -1,6 +1,6 @@
 # Cursor Workspace Setup (FastAPI + Pydantic + pytest)
 
-This repository provides a lean, practical Cursor setup focused on Python backend quality.
+This repository provides a practical Cursor setup focused on Python backend quality.
 
 - **Backend:** FastAPI + Pydantic
 - **Testing:** pytest
@@ -30,40 +30,35 @@ The setup is intentionally simple: clear rules, reusable task commands, and ligh
    │  └─ agent-refactor.md
    └─ skills/
       ├─ skill-clean-code.md
-      └─ skill-react-next-patterns.md
+      ├─ skill-react-next-patterns.md
+      └─ skill-semantic-commits.md
 ```
-
-> If you are working only with FastAPI, prioritize the Python rule files listed above.
-
----
-
 
 ## Rule filename order (numeric pattern)
 
 Numeric prefixes keep files organized by responsibility and reading order:
 
 - `00-*`: global base rules
-- `10-*` to `50-*`: framework/language-specific implementation rules
+- `10-*` and `20-*`: backend/frontend framework guidance
+- `30-*` to `50-*`: Python implementation rules
 - `90-*` and above: review/report formatting rules
 
 For this workspace:
 - `00-global-clean-code.mdc`: universal naming and code hygiene
 - `10-backend-nest.mdc`: NestJS backend boundaries
-- `20-frontend-next.mdc`: Next.js/React rendering and component rules
+- `20-frontend-next.mdc`: Next.js/React component and rendering guidance
 - `30-python-fastapi.mdc`: FastAPI router/service architecture
 - `40-python-pydantic.mdc`: Pydantic validation/model discipline
-- `50-python-pytest.mdc`: pytest test quality expectations
+- `50-python-pytest.mdc`: pytest quality expectations
 - `90-reviewer.mdc`: generic review output format
 - `95-python-review-format.mdc`: Python-specific review checklist
 
----
+## How to use each layer
 
-## What each layer means (practical)
+### 1) Rules
+Rules are persistent constraints applied automatically.
 
-### 1) Rules — when to use
-Rules are persistent constraints that should be applied automatically.
-
-Use rules for things that are:
+Use rules for anything that is:
 - structural,
 - non-negotiable,
 - always expected.
@@ -75,73 +70,16 @@ For FastAPI projects, rules should enforce:
 - pytest coverage for new behavior,
 - naming and Clean Code conventions.
 
-**Mindset:** if you never want to debate it again, make it a rule.
+### 2) Commands
+Commands are reusable prompt templates for specific tasks.
 
-### 2) Commands — when to use
-Commands are reusable prompt templates for specific task execution.
-
-Use commands when you want consistent output for tasks like:
+Use commands for consistent output when:
 - implementing a feature,
 - reviewing code,
 - refactoring safely,
 - writing tests.
 
-**Mindset:** I want repeatable behavior for this task type.
-
-### 3) Skills — when to use
+### 3) Skills
 Skills are compact reference modules with technical patterns.
 
-Use skills when the model needs guidance on how your team builds things (style, architecture, standards).
-
-**Mindset:** this is how our engineering standards work.
-
-### 4) Hooks — when to use
-Hooks are event-based automation (reminders/checks on file changes).
-
-They are optional. Start without hooks unless you need automated guardrails.
-
-### 5) MCP — when to use
-MCP is for external tool integration (scripts, services, databases, generators).
-
-This workspace currently avoids MCP to keep things simple.
-
----
-
-## How layers work together (real FastAPI flow)
-
-Example: you need a new endpoint.
-
-1. Start with a command template for implementation.
-2. Cursor applies project and Python rules (`.cursorrules` + `python-*.mdc`).
-3. Use skill references for naming and architecture consistency.
-4. Run review command and enforce the review format.
-5. Add/update pytest coverage.
-
----
-
-## Responsibility hierarchy
-
-| Layer | Purpose | Usage frequency |
-|---|---|---|
-| Rules | Fixed project constraints | Always |
-| Commands | Task execution format | Very frequent |
-| Skills | Technical reference patterns | Medium |
-| Hooks | Automation | Optional |
-| MCP | External integrations | Advanced |
-
----
-
-## What matters most for your current stack
-
-For **FastAPI + Pydantic + pytest**, you mainly need:
-
-- ✅ Rules
-- ✅ Command templates
-- ✅ Skills
-
-You do **not** need initially:
-
-- ❌ Hooks
-- ❌ MCP
-
-Keep the workflow simple: **implement -> test -> refactor -> review**.
+Use skills when the model needs guidance on team standards (style, architecture, naming).
