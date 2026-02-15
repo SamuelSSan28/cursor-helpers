@@ -16,13 +16,13 @@ The setup is intentionally simple: clear rules, reusable task commands, and ligh
 └─ .cursor/
    ├─ rules/
    │  ├─ 00-global-clean-code.mdc
-   │  ├─ python-fastapi.mdc
-   │  ├─ python-pydantic.mdc
-   │  ├─ python-pytest.mdc
-   │  ├─ python-review-format.mdc
    │  ├─ 10-backend-nest.mdc
    │  ├─ 20-frontend-next.mdc
-   │  └─ 90-reviewer.mdc
+   │  ├─ 30-python-fastapi.mdc
+   │  ├─ 40-python-pydantic.mdc
+   │  ├─ 50-python-pytest.mdc
+   │  ├─ 90-reviewer.mdc
+   │  └─ 95-python-review-format.mdc
    ├─ commands/
    │  ├─ agent-backend-nest.md
    │  ├─ agent-frontend-next.md
@@ -34,6 +34,27 @@ The setup is intentionally simple: clear rules, reusable task commands, and ligh
 ```
 
 > If you are working only with FastAPI, prioritize the Python rule files listed above.
+
+---
+
+
+## Rule filename order (numeric pattern)
+
+Numeric prefixes keep files organized by responsibility and reading order:
+
+- `00-*`: global base rules
+- `10-*` to `50-*`: framework/language-specific implementation rules
+- `90-*` and above: review/report formatting rules
+
+For this workspace:
+- `00-global-clean-code.mdc`: universal naming and code hygiene
+- `10-backend-nest.mdc`: NestJS backend boundaries
+- `20-frontend-next.mdc`: Next.js/React rendering and component rules
+- `30-python-fastapi.mdc`: FastAPI router/service architecture
+- `40-python-pydantic.mdc`: Pydantic validation/model discipline
+- `50-python-pytest.mdc`: pytest test quality expectations
+- `90-reviewer.mdc`: generic review output format
+- `95-python-review-format.mdc`: Python-specific review checklist
 
 ---
 
