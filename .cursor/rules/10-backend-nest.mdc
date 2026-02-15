@@ -1,0 +1,18 @@
+---
+description: "NestJS backend rules (SOLID/DDD-lite, testing, error contracts)"
+globs:
+  - "apps/api/**/*.ts"
+  - "src/backend/**/*.ts"
+  - "**/*.controller.ts"
+  - "**/*.service.ts"
+  - "**/*.module.ts"
+alwaysApply: false
+---
+
+# NestJS Backend Rules
+- Keep controllers thin: validation + delegation only.
+- Business logic must live in services/use-cases.
+- Prefer dependency inversion: depend on interfaces when a boundary exists (db, external services).
+- Define a consistent error contract (status, message, code).
+- Avoid boolean-flag parameters in services; prefer objects or strategies.
+- Add tests for new behavior (happy path + 2 edge cases).

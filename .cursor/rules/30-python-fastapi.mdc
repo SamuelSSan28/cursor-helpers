@@ -1,0 +1,16 @@
+---
+description: "FastAPI backend rules (routing, dependencies, service boundaries)"
+globs:
+  - "**/*fastapi*.py"
+  - "**/api/**/*.py"
+  - "**/routers/**/*.py"
+  - "**/endpoints/**/*.py"
+alwaysApply: false
+---
+
+# FastAPI Rules
+- Keep route handlers thin: validate input, call service/use-case, map output.
+- Move business logic to service/use-case layers.
+- Use dependency injection for external boundaries (database, HTTP clients, queues).
+- Return consistent HTTP errors and response shapes.
+- Keep startup/config wiring separate from domain logic.

@@ -1,0 +1,17 @@
+---
+description: "Standard review format + checklist"
+alwaysApply: true
+---
+
+# Review Output Format
+Always respond with:
+1) Summary
+2) 🔴 Blockers
+3) 🟠 Improvements
+4) 🟡 Suggestions
+5) Final checklist (naming, magic numbers, conditionals, tests, React render hygiene)
+
+Each issue must include:
+- What is wrong
+- Why it matters
+- Concrete fix (with snippet)
