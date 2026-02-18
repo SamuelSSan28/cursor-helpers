@@ -29,9 +29,12 @@ The setup is intentionally simple: clear rules, reusable task commands, and ligh
    │  ├─ agent-reviewer.md
    │  └─ agent-refactor.md
    └─ skills/
-      ├─ skill-clean-code.md
-      ├─ skill-react-next-patterns.md
-      └─ skill-semantic-commits.md
+      ├─ skill-clean-code/
+      │  └─ SKILL.md
+      ├─ skill-react-next-patterns/
+      │  └─ SKILL.md
+      └─ skill-semantic-commits/
+         └─ SKILL.md
 ```
 
 ## Rule filename order (numeric pattern)

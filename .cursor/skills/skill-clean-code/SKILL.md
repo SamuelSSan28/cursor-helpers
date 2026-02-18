@@ -1,12 +1,17 @@
-Skill: Clean Code Core
+---
+name: skill-clean-code
+description: Clean Code core rules for readability, maintainability, and predictability. Use when enforcing naming, conditionals, constants, and comments.
+---
 
-Goals:
+# Clean Code Core
+
+## Goals
 - Readability
 - Maintainability
 - Predictability
 - Confidence
 
-Rules:
+## Rules
 - English semantic naming, no abbreviations.
 - Booleans: is/has/can/should/does.
 - Cause over effect naming.
