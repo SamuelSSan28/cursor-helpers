@@ -21,6 +21,7 @@ The setup is intentionally simple: clear rules, reusable task commands, and ligh
    │  ├─ 30-python-fastapi.mdc
    │  ├─ 40-python-pydantic.mdc
    │  ├─ 50-python-pytest.mdc
+   │  ├─ 85-semantic-commits.mdc
    │  ├─ 90-reviewer.mdc
    │  └─ 95-python-review-format.mdc
    ├─ commands/
@@ -31,9 +32,7 @@ The setup is intentionally simple: clear rules, reusable task commands, and ligh
    └─ skills/
       ├─ skill-clean-code/
       │  └─ SKILL.md
-      ├─ skill-react-next-patterns/
-      │  └─ SKILL.md
-      └─ skill-semantic-commits/
+      └─ skill-react-next-patterns/
          └─ SKILL.md
 ```
 
@@ -53,6 +52,7 @@ For this workspace:
 - `30-python-fastapi.mdc`: FastAPI router/service architecture
 - `40-python-pydantic.mdc`: Pydantic validation/model discipline
 - `50-python-pytest.mdc`: pytest quality expectations
+- `85-semantic-commits.mdc`: Conventional Commit single-line and change grouping
 - `90-reviewer.mdc`: generic review output format
 - `95-python-review-format.mdc`: Python-specific review checklist
 

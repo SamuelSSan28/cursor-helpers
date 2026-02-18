@@ -1,0 +1,34 @@
+---
+description: "Commit messages: Conventional Commit single-line; grouping and output format when multiple commits"
+alwaysApply: true
+---
+
+# Semantic Commits (single-line) + change grouping
+
+Whenever a commit is requested or commit messages are proposed:
+
+## Format
+- **Commits must be single line only.** No multi-line body, no line breaks in the message.
+- **One line per commit:** `<type>(<scope>): <imperative summary>`
+- Types: feat | fix | refactor | test | docs | chore | ci | perf | build
+- Summary: imperative, concise, specific (e.g. "add login validation" not "added login validation")
+- One commit = one cohesive intent. Prefer fewer commits unless changes represent distinct intents.
+- Avoid mixing unrelated areas (backend vs frontend vs infra) unless tightly coupled.
+
+## Scopes (suggested)
+- api-python (FastAPI) | api (NestJS) | web (Next.js) | shared | infra | ci | docs
+
+## Grouping heuristics
+- Group by feature/module path first (e.g. modules/payments/*).
+- Then by layer: schema/service/router/tests can be grouped if they belong to the same feature.
+- Separate pure formatting/lint changes into chore.
+- Separate test-only changes into test.
+- Separate refactors from behavior changes unless strictly required.
+
+## Output format (when proposing multiple commits)
+- Commit plan:
+  - Group 1: [intent]
+    - Files: [...]
+    - Commit: type(scope): summary
+  - Group 2: ...
+- If everything is cohesive, propose a single commit.
